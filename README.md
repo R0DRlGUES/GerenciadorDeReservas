@@ -11,7 +11,12 @@ O projeto é uma aplicação web para gerenciar um Hotel, controlando o registro
 - Spring Framework
 - HTML
 - CSS
+## Autores
 
+Este projeto foi desenvolvido pelos seguintes estudantes da Universidade Paranaense (UNIPAR):
+
+- [Pedro Henrique Pinheiro Rodrigues](https://github.com/R0DRlGUES) - RA: 236649-1
+  
 ## Licença
 
 Este projeto é distribuído sob a licença [MIT](https://github.com/seu-usuario/seu-repositorio/blob/master/LICENSE). Consulte o arquivo `LICENSE` para obter mais informações.
