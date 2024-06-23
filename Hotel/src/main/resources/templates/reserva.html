@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/LayoutCadastroReserva.css">
+    <title>Cadastro de Reserva</title>
+</head>
+<body>
+<div class="container">
+    <h2>Cadastro de Reserva</h2>
+    <form th:action="@{/reserva/save}" method="post">
+        <div class="form-group">
+            <label for="dataEntrada">Data de Entrada:</label>
+            <input type="date" id="dataEntrada" name="dataEntrada" required title="A Reserva deve conter pelo menos 2 dias">
+        </div>
+        <div class="form-group">
+            <label for="dataSaida">Data de Saída:</label>
+            <input type="date" id="dataSaida" name="dataSaida" required>
+        </div>
+        <div class="form-group">
+            <label for="status">Status:</label>
+            <select id="status" name="status" required>
+                <option value="pendente">Pendente</option>
+                <option value="aberto">Aberto</option>
+                <option value="fechado">Fechado</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="valorTotal">Valor Total:</label>
+            <input type="number" id="valorTotal" name="valor_total" step="0.01" required>
+        </div>
+        <div class="form-group">
+            <label for="cliente_id">Hospede:</label>
+            <select id="cliente_id" name="pk_hospede" required>
+                <option value="">Selecione um cliente</option>
+                <option th:each="hospede : ${hospedes}"
+                        th:value="${hospede.id}"
+                        th:text="${hospede.nome}">
+                </option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="quarto_id">Quarto:</label>
+            <select id="quarto_id" name="pk_quarto" required>
+                <option value="">Selecione um quarto</option>
+                <option th:each="quarto : ${quartos}"
+                        th:value="${quarto.id}"
+                        th:text="${quarto.nome + ' - ' + quarto.status}">
+                </option>
+            </select>
+        </div>
+        <div class="card-buttons">
+            <button class="btn-salvar">Salvar</button>
+        </div>
+    </form>
+    <div class="card-buttons">
+        <form th:action="@{/reserva/retornar}" method="post">
+            <button class="btn-voltar">Voltar</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>

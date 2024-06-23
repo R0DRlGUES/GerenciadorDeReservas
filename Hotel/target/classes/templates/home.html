@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/LayoutHome.css">
+    <title>Tela de Cadastros</title>
+</head>
+<body>
+<div class="container">
+    <div class="card">
+        <h2>Escolha uma opção de cadastro</h2>
+        <div class="button-group">
+            <form th:action="@{/hospede}" method="get">
+                <button type="submit">Cadastro Cliente ou Hóspede</button>
+            </form>
+            <form th:action="@{/quarto}" method="get">
+                <button type="submit">Cadastro Quarto</button>
+            </form>
+            <form th:action="@{/reserva}" method="get">
+                <button type="submit">Cadastro Reserva</button>
+            </form>
+            <form th:action="@{/consultarQuartos}" method="get">
+                <button type="submit">Consulta de Quartos</button>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+
+
+
+

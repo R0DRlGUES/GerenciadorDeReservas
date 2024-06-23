@@ -1,0 +1,100 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.search-container button {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #45a049;
+}
+
+.search-by-occupants {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-by-occupants input {
+    width: 60px; /* Largura pequena para o input */
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.search-by-occupants button {
+    flex-grow: 1; /* Botão ocupa todo o espaço disponível */
+    padding: 15px; /* Aumenta o padding para ficar grande */
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-by-occupants button:hover {
+    background-color: #45a049;
+}
+
+#results {
+    margin-top: 20px;
+}
+
+#resultsList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#resultsList li {
+    padding: 10px;
+    background-color: #e9e9e9;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.card-buttons button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+}
+.btn-voltar {
+    background-color: #ff6347; /* Vermelho */
+    color: white;
+}
