@@ -16,6 +16,7 @@ O projeto é uma aplicação web para gerenciar um Hotel, controlando o registro
 Este projeto foi desenvolvido pelos seguintes estudantes da Universidade Paranaense (UNIPAR):
 
 - [Pedro Henrique Pinheiro Rodrigues](https://github.com/R0DRlGUES) - RA: 236649-1
+- Mateus Martins - RA: 231293-1
   
 ## Licença
 
