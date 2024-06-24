@@ -8,6 +8,8 @@ import java.util.List;
 
 @Service
 public class QuartoService {
+
+
     private final QuartoRepository quartoRepository;
 
     public QuartoService(QuartoRepository quartoRepository) {
@@ -24,8 +26,8 @@ public class QuartoService {
         return null;
     }
 
-    public List<Quarto> findByDisponivel(String quartoStatus) {
-        return quartoRepository.findByDisponivel(quartoStatus);
+    public List<Quarto> findByDisponivel() {
+        return quartoRepository.findByDisponivel();
     }
 
     public List<Quarto> findByQtdMaxOcupantes(Integer qtd_max_ocupantes) {

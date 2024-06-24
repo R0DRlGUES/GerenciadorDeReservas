@@ -14,7 +14,7 @@ public interface QuartoRepository extends JpaRepository<Quarto,Long>{
     List<Quarto> findById(Integer id);
 
     @Query("SELECT q FROM Quarto q WHERE q.status = 'Aberto'")
-    List<Quarto> findByDisponivel(String quartoStatus);
+    List<Quarto> findByDisponivel();
 
     @Query("SELECT q FROM Quarto q WHERE q.qtd_max_ocupantes = :qtdMaxOcupantes")
     List<Quarto> findByQtdMaxOcupantes(Integer qtdMaxOcupantes);
