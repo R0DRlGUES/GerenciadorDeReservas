@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/LayoutConsultaQuarto.css">
+    <title>Lista de Quartos Disponiveis</title>
+</head>
+<body>
+<div class="container">
+    <h1>Busca de Quartos</h1>
+    <table class="table-container">
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Quantidade de Ocupantes</th>
+            <th>Status</th>
+            <th>Vista P/ Mar</th>
+            <th>Valor</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="quarto : ${quartos}">
+            <td th:text="${quarto.id}"></td>
+            <td th:text="${quarto.nome}"></td>
+            <td th:text="${quarto.qtd_max_ocupantes}"></td>
+            <td th:text="${quarto.status}"></td>
+            <td th:text="${quarto.vista_mar ? 'Sim' : 'Não'}"></td>
+            <td th:text="${quarto.valor_dia}"></td>
+        </tr>
+        </tbody>
+    </table>
+    <div class="card-buttons">
+        <form th:action="@{/retornarConsultaDisponivelHome}" method="post">
+            <button type="submit" class="btn-voltar">Voltar</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
