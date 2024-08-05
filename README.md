@@ -1,4 +1,4 @@
-# Gerenciamento de Reservas
+# ReserveStream
 Este é um projeto desenvolvido como trabalho de faculdade, implementado utilizando Java, Spring Framework, HTML, CSS e conexão com banco de dados.
 
 ## Descrição
